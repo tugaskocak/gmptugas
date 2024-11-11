@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.image-wrapper {
+    width: 100%;
+    padding-top: 100%; /* membuat persegi */
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* agar gambar tampil utuh tanpa crop */
+}
+
+.product-name {
+    color: #b83227;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.country,
+.manufacturer,
+.type,
+.category {
+    color: #666;
+    margin: 4px 0;
+    font-size: 0.9em;
+}
+.content-wrapper {
+            margin-top: 80px;
+        }
+        .header-title {
+            color: #a52a2a;
+            font-size: 2rem;
+            margin-top: 20px;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Poppins', sans-serif; /* Terapkan font Poppins untuk header */
+            margin-bottom: 20px;
+        }
+        /* Mengatur warna teks navbar menjadi putih */
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #ffffff !important; /* Mengatur warna teks menjadi putih */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animasi warna dan transformasi */
+}
+
+/* Menambahkan efek hover dengan perubahan warna dan sedikit transformasi */
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+    color: #e0e0e0; /* Warna putih keabu-abuan saat di-hover */
+    transform: scale(1.1); /* Efek membesar saat di-hover */
+}
+
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color:rgba(0,0,0,0.5) ;">
+        <div class="container-fluid">
+        <img src="Logo Oxy Medica.png" height="50px" width="50px">
+          <a class="navbar-brand"id="animated-text" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="HALAMAN UTAMA.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produk
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="SEMUA PRODUK.html">Semua Produk</a></li>
+                  <li><a class="dropdown-item" href="#">Generik Berlogo</a></li>
+                  <li><a class="dropdown-item" href="PRODUK BERMEREK.html">Generik Bermerek</a></li>
+                  <li><a class="dropdown-item" href="VITAMIN & SUPLEMEN.html">Vitamin dan Suplemen</a></li>
+                </ul>
+              </li>
+ 
+          </div>
+        </div>
+      </nav>
+      <div class="content-wrapper">
+        <div class="header-title">
+            GENERIK BERLOGO
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/1.png" alt="Acanth SPF-30+" class="product-image">
+                </div>
+                <h3 class="product-name">Candesartan Cilexetil</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+            
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/2.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Gliclazide</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/3.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Bromhexin HCl</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/4.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Glimepiride</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/5.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Pregabalin</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/6.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Captopril</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">KAPSUL</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/7.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Ramipril</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">DEXA MEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/8.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Losartan</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/9.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Valsartan</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+    
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/10.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Atorvastatin Calcium Trihydrate</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/11.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Asam Mefenamat</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/12.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Prednisone</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/13.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Ciprofloxacin HCl</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/14.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Ibuprofen</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">TABLET</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/15.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Cetrizine</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">SIRUP</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/16.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Lactulose</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">SIRUP</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/17.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Paracetamol</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">SIRUP</p>
+            </div>
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="foto obat/generik berlogo/18.png" alt="Acpulsif" class="product-image">
+                </div>
+                <h3 class="product-name">Chloramphenicol Palmitate</h3>
+                <p class="country">INDONESIA</p>
+                <p class="manufacturer">OXYMEDICA</p>
+                <p class="type">Generik Berlogo</p>
+                <p class="category">SUSPENSI</p>
+            </div>
+            </div>
+        </div>
+        <script>
+            const textElement = document.getElementById('animated-text');
+            const text = "Oxy Medica";
+            let index = 0;
+    
+            function typeText() {
+                if (index < text.length) {
+                    textElement.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeText, 200); // Mengatur kecepatan pengetikan, bisa disesuaikan
+                }
+            }
+    
+            typeText();
+    
+            // Fungsi untuk menambahkan kelas 'show' saat card muncul di viewport
+    function handleScrollAnimation() {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (cardTop < windowHeight - 100) { // Trigger animasi sedikit sebelum card sepenuhnya terlihat
+                card.classList.add('show');
+            }
+        });
+    }
+    
+    // Menjalankan fungsi saat halaman di-scroll atau di-load
+    window.addEventListener('scroll', handleScrollAnimation);
+    window.addEventListener('load', handleScrollAnimation);
+    
+        </script>
+    </body>
+    </html>
